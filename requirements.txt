@@ -1,0 +1,16 @@
+sentence-transformers
+numpy>=2.0
+langchain
+flask
+pypdf
+python-dotenv
+pinecone[grpc]
+langchain-pinecone
+langchain_community
+langchain_openai
+langchain_experimental
+langchain-google-genai
+langchain-classic
+langchain-huggingface
+gunicorn==21.2.0
+-e .
