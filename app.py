@@ -10,19 +10,19 @@ init_error_log = []
 try:
     from src.helper import download_hugging_face_embeddings
 except Exception as e:
-    init_error_log.append(f"Failed to import download_hugging_face_embeddings: {e}")
+    init_error_log.append(f"Failed to import download_hugging_face_embeddings: {str(e)}\n{traceback.format_exc()}")
     download_hugging_face_embeddings = None
 
 try:
     from langchain_pinecone import PineconeVectorStore
 except Exception as e:
-    init_error_log.append(f"Failed to import PineconeVectorStore: {e}")
+    init_error_log.append(f"Failed to import PineconeVectorStore: {str(e)}\n{traceback.format_exc()}")
     PineconeVectorStore = None
 
 try:
     from langchain_google_genai import ChatGoogleGenerativeAI
 except Exception as e:
-    init_error_log.append(f"Failed to import ChatGoogleGenerativeAI: {e}")
+    init_error_log.append(f"Failed to import ChatGoogleGenerativeAI: {str(e)}\n{traceback.format_exc()}")
     ChatGoogleGenerativeAI = None
 
 try:
@@ -30,7 +30,7 @@ try:
     from langchain_classic.chains.combine_documents import create_stuff_documents_chain
     from langchain_core.prompts import ChatPromptTemplate
 except Exception as e:
-    init_error_log.append(f"Failed to import LangChain components: {e}")
+    init_error_log.append(f"Failed to import LangChain components: {str(e)}\n{traceback.format_exc()}")
     create_retrieval_chain = None
     create_stuff_documents_chain = None
     ChatPromptTemplate = None
