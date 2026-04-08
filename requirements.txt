@@ -1,13 +1,13 @@
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch
 sentence-transformers
-numpy<2.0
+numpy>=1.26.0
 langchain
 flask
 pypdf
 python-dotenv
 pinecone[grpc]
-langchain-pinecone
+langchain-pinecone>=0.1.1
 langchain_community
 langchain_openai
 langchain_experimental
